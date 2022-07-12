@@ -5,10 +5,9 @@ var app = express();
 // This responds with "Hello World" on the homepage
 app.get('/', function (req, res) {
     console.log("Got a GET request for the homepage");
-    const userCount = 10;
+    const userCount = Math.ceil(Math.random() * 100);
     res.send(`Hello GET. Users are: ${userCount}`);
  })
-
 
 // This responds a DELETE request for the /del_user page.
 app.delete('/del_user', function (req, res) {
